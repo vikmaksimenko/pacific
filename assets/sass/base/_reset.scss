@@ -1,70 +1,58 @@
-// Reset.
-// Based on meyerweb.com/eric/tools/css/reset (v2.0 | 20110126 | License: public domain)
+/*
+Error: Undefined mixin 'breakpoint'.
+        on line 14 of assets/sass/base/_page.scss, in `breakpoint'
+        from line 14 of assets/sass/base/_page.scss
 
-	html, body, div, span, applet, object,
-	iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
-	pre, a, abbr, acronym, address, big, cite,
-	code, del, dfn, em, img, ins, kbd, q, s, samp,
-	small, strike, strong, sub, sup, tt, var, b,
-	u, i, center, dl, dt, dd, ol, ul, li, fieldset,
-	form, label, legend, table, caption, tbody,
-	tfoot, thead, tr, th, td, article, aside,
-	canvas, details, embed, figure, figcaption,
-	footer, header, hgroup, menu, nav, output, ruby,
-	section, summary, time, mark, audio, video {
-		margin: 0;
-		padding: 0;
-		border: 0;
-		font-size: 100%;
-		font: inherit;
-		vertical-align: baseline;
-	}
+9: 		body {
+10: 			-ms-overflow-style: scrollbar;
+11: 		}
+12: 
+13: 	// Ensures page width is always >=320px.
+14: 		@include breakpoint('<=xsmall') {
+15: 			html, body {
+16: 				min-width: 320px;
+17: 			}
+18: 		}
+19: 
 
-	article, aside, details, figcaption, figure,
-	footer, header, hgroup, menu, nav, section {
-		display: block;
-	}
-
-	body {
-		line-height: 1;
-	}
-
-	ol, ul {
-		list-style:none;
-	}
-
-	blockquote,	q {
-		quotes: none;
-
-		&:before,
-		&:after {
-			content: '';
-			content: none;
-		}
-	}
-
-	table {
-		border-collapse: collapse;
-		border-spacing: 0;
-	}
-
-	body {
-		-webkit-text-size-adjust: none;
-	}
-
-	mark {
-		background-color: transparent;
-		color: inherit;
-	}
-
-	input::-moz-focus-inner {
-		border: 0;
-		padding: 0;
-	}
-
-	input, select, textarea {
-		-moz-appearance: none;
-		-webkit-appearance: none;
-		-ms-appearance: none;
-		appearance: none;
-	}
+Backtrace:
+assets/sass/base/_page.scss:14:in `breakpoint'
+assets/sass/base/_page.scss:14
+/home/vmaksimenko/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:348:in `block in visit_mixin'
+/home/vmaksimenko/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:98:in `block in with_mixin'
+/home/vmaksimenko/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
+/home/vmaksimenko/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:98:in `with_mixin'
+/home/vmaksimenko/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:346:in `visit_mixin'
+/home/vmaksimenko/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+/home/vmaksimenko/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/home/vmaksimenko/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
+/home/vmaksimenko/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
+/home/vmaksimenko/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
+/home/vmaksimenko/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/home/vmaksimenko/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/home/vmaksimenko/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `map'
+/home/vmaksimenko/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/home/vmaksimenko/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/home/vmaksimenko/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/home/vmaksimenko/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/home/vmaksimenko/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/home/vmaksimenko/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/home/vmaksimenko/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+/home/vmaksimenko/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/home/vmaksimenko/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:10:in `visit'
+/home/vmaksimenko/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/root_node.rb:36:in `css_tree'
+/home/vmaksimenko/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/home/vmaksimenko/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/home/vmaksimenko/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/home/vmaksimenko/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:387:in `run'
+/home/vmaksimenko/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/home/vmaksimenko/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/exec/base.rb:50:in `parse'
+/home/vmaksimenko/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/exec/base.rb:18:in `parse!'
+/home/vmaksimenko/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sass-3.7.4/bin/sass:13:in `<top (required)>'
+/home/vmaksimenko/.rbenv/versions/2.6.1/bin/sass:23:in `load'
+/home/vmaksimenko/.rbenv/versions/2.6.1/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined mixin 'breakpoint'.\A         on line 14 of assets/sass/base/_page.scss, in `breakpoint'\A         from line 14 of assets/sass/base/_page.scss\A \A 9: 		body {\A 10: 			-ms-overflow-style: scrollbar;\A 11: 		}\A 12: \A 13: 	// Ensures page width is always >=320px.\A 14: 		@include breakpoint('<=xsmall') {\A 15: 			html, body {\A 16: 				min-width: 320px;\A 17: 			}\A 18: 		}\A 19: "; }
